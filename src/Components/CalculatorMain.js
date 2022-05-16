@@ -13,7 +13,7 @@ class Calculator extends Component {
 
   calculate = () => {
     try {
-      const result = eval(this.state.data);
+      const result = eval(this.state.userdata);
       this.setState({ userdata: result });
     } catch (error) {
       this.setState({ userdata: "error" });
