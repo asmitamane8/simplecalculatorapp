@@ -8,15 +8,15 @@ class Calculator extends Component {
 
   constructor() {
     super();
-    this.state = { userdata: "" };
+    this.state = { userdata:""};
   }
 
   calculate = () => {
     try {
       const result = eval(this.state.userdata);
-      this.setState({ userdata: result });
+      this.setState({ userdata:result });
     } catch (error) {
-      this.setState({ userdata: "error" });
+      this.setState({ userdata:"error"});
     }
   };
 
@@ -25,7 +25,7 @@ class Calculator extends Component {
     const value = event.target.getAttribute("data-value");
     switch (value) {
       case "clear":
-        this.setState({ userdata: "" });
+        this.setState({ userdata:""});
         break;
       case "equal":
         this.calculate();
