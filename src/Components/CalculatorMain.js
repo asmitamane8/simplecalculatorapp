@@ -8,18 +8,8 @@ class Calculator extends Component {
 
   constructor() {
     super();
-    this.state = { userdata:""};
+    this.state = { userdata:" "};
   }
-
-  calculate = () => {
-    try {
-      const result = eval(this.state.userdata);
-      this.setState({ userdata:result });
-    } catch (error) {
-      this.setState({ userdata:"error"});
-    }
-  };
-
 
   handleClick = (event) => {
     const value = event.target.getAttribute("data-value");
@@ -28,7 +18,8 @@ class Calculator extends Component {
         this.setState({ userdata:""});
         break;
       case "equal":
-        this.calculate();
+        const result = eval(this.state.userdata);
+        this.setState({ userdata:result });
         break;
       default:
         this.setState({ userdata: this.state.userdata + value });//append with user input

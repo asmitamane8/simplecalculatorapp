@@ -4,4 +4,5 @@
     flex-direction: column;
     height: 80%;
     background-color: black;
+    position: relative;
 }

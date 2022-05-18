@@ -4,8 +4,8 @@ import "./Display.css";
 class Display extends Component {
     render(){
         return(
-            <div className="Display">
-                {this.props.userdata}
+            <div className='inputdisplay'>
+               <input  className="input" type="text" readOnly value = {this.props.userdata}/>
             </div>
         );
     }
